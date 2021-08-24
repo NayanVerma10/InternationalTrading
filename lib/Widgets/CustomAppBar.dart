@@ -19,7 +19,11 @@ AppBar customAppBar(BuildContext context) {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Link(text: "Some Other Links"),
+              Link(text: "Products"),
+              SizedBox(width: 60),
+              Link(text: "Fright Rate"),
+              SizedBox(width: 60),
+              Link(text: "Get Started"),
             ],
           ),
         ),
