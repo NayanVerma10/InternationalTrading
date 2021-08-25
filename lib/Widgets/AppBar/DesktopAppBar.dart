@@ -1,9 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'Links.dart';
+import '../Links.dart';
 
-AppBar customAppBar(BuildContext context) {
+AppBar desktopAppBar(BuildContext context) {
   return AppBar(
     elevation: 0,
     title: Row(
