@@ -20,7 +20,12 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
             backgroundColor: Colors.transparent,
             titleTextStyle: TextStyle(fontSize: 16)),
-        textTheme: TextTheme(headline2: TextStyle(color: Colors.black)),
+        textTheme: TextTheme(
+            headline2: TextStyle(
+          color: Colors.black,
+          fontSize: 64,
+          fontWeight: FontWeight.normal,
+        )),
       ),
       home: const HomeScreen(),
     );
