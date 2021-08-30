@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
         appBarTheme: const AppBarTheme(
             backgroundColor: Colors.transparent,
-            titleTextStyle: TextStyle(fontSize: 14)),
+            titleTextStyle: TextStyle(fontSize: 16)),
+        textTheme: TextTheme(headline2: TextStyle(color: Colors.black)),
       ),
       home: const HomeScreen(),
     );

@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 class Link extends StatefulWidget {
   final String text;
-  const Link({Key? key, required this.text}) : super(key: key);
+  final TextStyle linkStyle;
+  const Link({Key? key, required this.text, required this.linkStyle})
+      : super(key: key);
 
   @override
   _LinkState createState() => _LinkState();
@@ -17,7 +19,7 @@ class _LinkState extends State<Link> {
     return RichText(
       text: TextSpan(
         text: widget.text,
-        style: TextStyle(
+        style: widget.linkStyle.copyWith(
           color: (_hover ? Theme.of(context).primaryColor : null),
         ),
         onEnter: (_) {
