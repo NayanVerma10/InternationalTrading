@@ -16,16 +16,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.amber,
         appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.transparent,
-            titleTextStyle: TextStyle(fontSize: 16)),
-        textTheme: TextTheme(
-            headline2: TextStyle(
-          color: Colors.black,
-          fontSize: 64,
-          fontWeight: FontWeight.normal,
-        )),
+          backgroundColor: Colors.transparent,
+          titleTextStyle: TextStyle(fontSize: 16),
+        ),
+        textTheme: const TextTheme(
+          headline2: TextStyle(
+            color: Colors.black,
+            fontSize: 64,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
       ),
       home: const HomeScreen(),
     );
