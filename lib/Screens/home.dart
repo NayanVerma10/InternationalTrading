@@ -16,18 +16,24 @@ class HomeScreen extends StatelessWidget {
       appBar: Responsive.isMobileView(context)
           ? mobileAppBar(context)
           : desktopAppBar(context),
-      body: Stack(
-        alignment: Alignment.center,
-        children: [
-          CircularParticle(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              numberOfParticles: 200,
-              particleColor: Theme.of(context).primaryColor.withOpacity(0.4),
-              connectDots: true,
-              isRandomColor: false),
-          const DesktopMainScreen(),
-        ],
+      body: SingleChildScrollView(
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            // Container(
+            //   width: MediaQuery.of(context).size.width,
+            //   height: MediaQuery.of(context).size.height,
+            // ),
+            CircularParticle(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                numberOfParticles: 200,
+                particleColor: Theme.of(context).primaryColor.withOpacity(0.4),
+                connectDots: true,
+                isRandomColor: false),
+            DesktopMainScreen(),
+          ],
+        ),
       ),
     );
   }
