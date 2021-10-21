@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import '../../Constants/Content.dart' as content;
+import 'package:carousel_slider/carousel_slider.dart';
 
 class DesktopMainScreen extends StatelessWidget {
   const DesktopMainScreen({Key? key}) : super(key: key);
@@ -14,8 +15,9 @@ class DesktopMainScreen extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 1400),
       padding: EdgeInsets.symmetric(horizontal: 25),
       child: Column(
-        //pageSnapping: false,
+        //pageSnapping: false, // When using PageView
         children: [
+          // First Page
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
@@ -25,13 +27,12 @@ class DesktopMainScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Spacer(
-                    flex: 1,
-                  ),
+                  Spacer(flex: 1),
                   SizedBox(
                     width: 800,
                     child: Text(
-                      content.HomePageTitle,
+                      content
+                          .HomePageTitle, //Easy Overseas - Connecting buyer and seller
                       style: Theme.of(context)
                           .textTheme
                           .headline2!
@@ -43,7 +44,8 @@ class DesktopMainScreen extends StatelessWidget {
                   SizedBox(
                     width: 800,
                     child: Text(
-                      content.HomePageDescription,
+                      content
+                          .HomePageDescription, // Find the best way to sell your product overseas. We connect you with buyers from contries you like ,help you from frauds. Build your website with us and much more
                       style: Theme.of(context)
                           .textTheme
                           .headline6!
@@ -80,24 +82,27 @@ class DesktopMainScreen extends StatelessWidget {
                         ),
                         onPressed: () {},
                         icon: Icon(Icons.play_circle_outline),
-                        label: Text(
-                          "Watch Video",
-                          style: TextStyle(fontSize: 20),
-                        ),
+                        label:
+                            Text("Watch Video", style: TextStyle(fontSize: 20)),
                       )
                     ],
                   ),
-                  Spacer(
-                    flex: 2,
-                  )
+                  Spacer(flex: 2)
                 ],
               ),
             ),
           ),
+          // Second page
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            color: Colors.green,
+            color: Colors.lightBlueAccent,
+            child: Column(
+              children: [
+                // TODO
+                //CarouselSlider(items: items, options: Ca)
+              ],
+            ),
           ),
         ],
       ),
